@@ -9,5 +9,16 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= styles.css.scss
  */
+
+
+@import "twitter/bootstrap";
+
+@import 'layout_salome.css.scss';
+@import 'mixins.css.scss';
+@import 'variables.css.scss';
+@import 'styles.css.scss';
+
+
+

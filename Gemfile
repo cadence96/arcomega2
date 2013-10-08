@@ -37,7 +37,11 @@ gem "capistrano"
 # To use debugger
 # gem 'debugger'
 
-gem "twitter-bootstrap-rails", :group => :assets
+
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails'
+gem "rails-backbone"
+
 gem "rvm-capistrano"
 gem "haml"
 gem "haml-rails"

@@ -1,0 +1,28 @@
+@import "twitter/bootstrap";
+
+
+
+.wrapper {@extend .container}
+.content {@extend .row}
+
+
+
+.wrapper .primi {background: pink}
+.content .secon {background: green}
+
+.navbar-inverse {background: none; border: 0; border-radius: 0}
+
+.primi {
+@extend .col-lg-4;
+@extend .col-md-4;
+@extend .col-sm-8;
+@extend .col-xs-6;
+}
+
+.secon {
+@extend .col-lg-8;
+@extend .col-md-8;
+@extend .col-sm-4;
+@extend .col-xs-6;
+}
+

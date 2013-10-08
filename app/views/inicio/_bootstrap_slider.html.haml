@@ -1,0 +1,42 @@
+#main-slider.carousel.slide
+  %ol.carousel-indicators
+    %li{:"data-target" => "#main-slider", :"data-slide-to" => 1, :class => "active"}
+    %li{:"data-target" => "#main-slider", :"data-slide-to" => 2}
+
+  <!-- Carousel items -->
+  .carousel-inner
+    .item.active
+      = image_tag 'img-servicio.jpg'
+    .item
+      = image_tag 'img-servicio.jpg'
+
+  <!-- Carousel nav -->
+  = link_to raw('&lsaquo;'), '#main-slider', :"data-slide" => 'prev', :class => 'carousel-control left'
+  = link_to raw('&rsaquo;'), '#main-slider', :"data-slide" => 'next', :class => 'carousel-control right'
+
+
+
+
+-#
+  #main-slider.carousel.slide
+    %ol.carousel-indicators
+      - @slides.each_with_index do |slide, index|
+        - if index == 0
+          %li{:"data-target" => "#main-slider", :"data-slide-to" => index.to_s, :class => "active"}
+        - else
+          %li{:"data-target" => "#main-slider", :"data-slide-to" => index.to_s}
+  
+    <!-- Carousel items -->
+    .carousel-inner
+      - @slides.each_with_index do |slide, index|
+        - if index == 0
+          .item.active
+            = image_tag slide.slide_url(:full)
+        - else
+          .item
+            = image_tag slide.slide_url(:full)
+  
+    <!-- Carousel nav -->
+    = link_to raw('&lsaquo;'), '#main-slider', :"data-slide" => 'prev', :class => 'carousel-control left'
+    = link_to raw('&rsaquo;'), '#main-slider', :"data-slide" => 'next', :class => 'carousel-control right'
+
