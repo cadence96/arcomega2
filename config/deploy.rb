@@ -1,5 +1,4 @@
 # coding: utf-8
-
 require "bundler/capistrano"
 require "rvm/capistrano"
 
